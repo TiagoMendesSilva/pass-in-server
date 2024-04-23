@@ -1,0 +1,31 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": 1234,
+    "details": null,
+    "maximumAttendees": 1
+}
+
+
+###
+
+POST http://localhost:3333/events/a61f43d4-322d-4a30-a7fa-b8a7d1fe4032/attendees
+Content-Type: application/json
+
+{
+    "name": "Renan",
+    "email": "renan@renan.com.br"
+}
+
+###
+GET http://localhost:3333/events/a61f43d4-322d-4a30-a7fa-b8a7d1fe4032
+
+###
+GET http://localhost:3333/attendees/4/badge
+
+###
+GET http://localhost:3333/attendees/4/check-in
+
+###
+GET http://localhost:3333/events/a80282df-ff2f-48df-947c-2c71010641b3/attendees?query=Diego
